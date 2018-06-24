@@ -2,9 +2,9 @@
    <div id="registration">
     <div class="form-content">
       <h1>Registration</h1>
-      <div class="subtitle">Create a <b>Coding Ninjas</b> account.
+      <div class="subtitle">Create a <b>Dev Pro</b> account.
         Registration confirmation will be emailed to you.</div>
-      <sui-form :submit.prevent="onSubmit">
+      <sui-form :submit="onSubmit">
         <sui-form-field>
           <label>Your name <input v-model="name" size="large" placeholder="Name"></label>
         </sui-form-field>
@@ -40,9 +40,8 @@ export default {
     }
   },
   methods: {
-    onSubmit(event) {
+    onSubmit() {
       if (!this.valid) return false;
-      console.log(event)
     }
   },
   computed: {

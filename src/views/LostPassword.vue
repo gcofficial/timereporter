@@ -3,7 +3,7 @@
     <div class="form-content">
       <h1>Lost password?</h1>
       <div class="subtitle">Please enter your email address. You will receive a link to create a new password via email.</div>
-      <sui-form :submit.prevent="onSubmit">
+      <sui-form :submit="onSubmit">
         <sui-form-field>
           <label>Email <input v-model="login" size="large" type="email" placeholder="Username"></label>
         </sui-form-field>
@@ -28,9 +28,8 @@ export default {
     }
   },
   methods: {
-    onSubmit(event) {
+    onSubmit() {
       if (!this.valid) return false;
-      console.log(event);
     }
   },
   computed: {

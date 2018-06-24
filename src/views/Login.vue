@@ -2,8 +2,8 @@
   <div id="login">
     <div class="form-content">
       <h1>Login</h1>
-      <div class="subtitle">Sign into your <b>Coding Ninjas</b> account</div>
-      <sui-form :submit.prevent="onSubmit">
+      <div class="subtitle">Sign into your <b>Dev Pro</b> account</div>
+      <sui-form :submit="onSubmit">
         <sui-form-field>
           <label>Email <input v-model="login" size="large" type="email" placeholder="Username"></label>
         </sui-form-field>
@@ -33,9 +33,8 @@ export default {
     }
   },
   methods: {
-    onSubmit(event) {
+    onSubmit() {
       if (!this.valid) return false;
-      console.log(event);
     }
   },
   computed: {
