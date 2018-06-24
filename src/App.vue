@@ -1,20 +1,43 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#app{
+  background: #fafafa;
+  width: 100%;
+  height: 100%;
+}
+
+.or-links{
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  margin: 0;
+  padding: 0;
+}
+
+.or-links li{
+  display: inline-block;
+}
+
+.or-links li:first-child{
+  margin-right: 5px;
+}
+
+.or-links li:first-child:after{
+  content: ' |';
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.field label{
+  line-height: 26px;
+}
+
+.ui.vertical.menu .item>i.icon{
+  font-family: ElegantIcons;
+  font-weight: 700;
+  float: none;
+  margin:  0;
 }
 </style>
